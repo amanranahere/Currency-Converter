@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap");
+
+/*   ||  RESET  ||   */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*   ||  UTILITIES  ||   */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/*  ||  IMAGE  ||  */
+
+.img-container {
+  width: 100%;
+  height: 18rem;
+  background-image: url(./assets/img.jpg);
+  background-position: center;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(#333, transparent);
+  mask-image: linear-gradient(#333, transparent);
+}
+
+/*  ||  HEADER AND FOOTER  ||   */
+
+header {
+  position: fixed;
+  top: 6rem;
+  width: 100%;
+  height: 15rem;
+  font-family: "Recursive";
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 5px 5px #fbc9c9;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  user-select: none;
+}
+
+/*   ||  BODY  ||   */
+
+body {
+  font-family: "Truculenta";
+  background-color: #333;
+  color: white;
+}
+
+/*   ||  MAIN  ||   */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+form {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form select,
+button,
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.75rem;
+}
+
+form input {
+  font-size: 1.3rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 5rem;
+}
+
+.select-container img {
+  max-width: 3rem;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.5rem;
+  padding-left: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+select {
+  font-size: 1.2rem;
+}
+
+.dropdown i {
+  margin-top: 2rem;
+}
+
+.msg {
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+  font-size: 3rem;
+}
+
+form button {
+  width: 20rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  background-color: #fbc9c9;
+  color: #333;
+  filter: contrast(1.2);
+  cursor: pointer;
+}
+
+form button:hover {
+  scale: 1.05;
+}
