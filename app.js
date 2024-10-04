@@ -30,19 +30,28 @@ for (let select of dropdowns) {
 const updateExchangeRate = async () => {
   let amount = document.querySelector(".amount input");
   let amtVal = amount.value;
+
   if (amtVal === "" || amtVal < 1) {
     amtVal = 1;
     amount.value = "1";
   }
 
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
-  let response = await fetch(URL);
-  let data = await response.json();
-  let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+  msg.innerText = "Loading...";
+  try {
+    let response = await fetch(URL);
 
-  let finalAmount = amtVal * rate;
+    if (!response.ok) throw new Error("Failed to fetch exchange rates");
 
-  msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+    let data = await response.json();
+    let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
+
+    let finalAmount = amtVal * rate;
+
+    msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
+  } catch (error) {
+    msg.innerText = `Error: ${error.message}`;
+  }
 };
 
 const updateFlag = (element) => {
