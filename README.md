@@ -12,7 +12,7 @@ A simple static website to convert different currencies based on user input. The
 
 ## Live Demo
 
-Check out the live demo https://amanranahere.github.io/Currency-Converter/
+Check out the live demo at: [Live demo](https://amanranahere.github.io/Currency-Converter/)
 <br><br><br>
 
 ## Usage
